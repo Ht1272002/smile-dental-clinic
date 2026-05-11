@@ -39,50 +39,36 @@ export default function Home() {
 )}
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-r from-blue-100 to-white py-20 px-10">
+      <section className="relative h-screen">
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <img
+    src="/image/clinic1.jpg"
+    alt="Dental Clinic"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-          <div>
+  <div className="absolute inset-0 bg-black/40"></div>
 
-            <img
-              src="image/logo.png.jpeg"
-              alt="smile dental clinic Logo"
-              className="w-56 mb-6 shadow-xl"
-            />
+  <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
 
-            <h1 className="text-6xl font-bold text-blue-900 leading-tight mb-6">
-              Smile Dental Clinic
-            </h1>
+    <h1 className="text-5xl md:text-7xl font-bold mb-6">
+      Smile Dental Clinic
+    </h1>
 
-            <p className="text-3xl text-gray-700 mb-4">
-              Dr. Hitesh Trivedi (B.D.S)
-            </p>
+    <p className="text-2xl md:text-3xl font-medium mb-8">
+      Creating Confident Smiles With Advanced Dental Care
+    </p>
 
-            <p className="text-xl text-gray-600 mb-8">
-              Advanced Dental Care • Painless Treatment • Smile Designing
-            </p>
+    <a
+      href="https://wa.me/919016705884"
+      target="_blank"
+      className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full text-2xl font-semibold"
+    >
+      Book Appointment
+    </a>
 
-            <a
-              href="https://wa.me/919016705884"
-              target="_blank"
-              className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl text-xl font-semibold shadow-xl"
-            >
-              Book Appointment
-            </a>
-
-          </div>
-
-          <div>
-            <img
-              src="/image/dental chair.png"
-              alt="dental Chair"
-              className="w-full h-[450px] object-cover rounded-3xl shadow-2xl"
-            />
-          </div>
-
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* ABOUT SECTION */}
       <section id="about" className="py-24 px-10 bg-white">
@@ -235,7 +221,7 @@ export default function Home() {
           </p>
 
           <p className="text-2xl mb-6">
-            📍 Ahmedabad, Gujarat
+            📍 -1 st floor devnandan complex near damru circle,ghatlodiya ahmedabad, Gujarat
           </p>
 
           <p className="text-xl text-gray-600 mb-10">
@@ -258,6 +244,20 @@ export default function Home() {
         © 2026 Smile Dental Clinic. All Rights Reserved.
       </footer>
 
-    </main>
+    <a
+  href="tel:+919016705884"
+  className="fixed bottom-24 left-5 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 text-3xl"
+>
+  📞
+</a>
+
+<a
+  href="https://wa.me/919016705884"
+  target="_blank"
+  className="fixed bottom-24 right-5 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 text-3xl"
+>
+  💬
+</a>
+</main>
   );
 }
