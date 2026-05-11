@@ -1,21 +1,42 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <main className="bg-white text-gray-800">
 
       {/* NAVBAR */}
-      <nav className="bg-blue-900 text-white px-8 py-5 flex justify-between items-center shadow-lg sticky top-0 z-50">
-        <h1 className="text-3xl font-bold">
+      <nav className="bg-blue-900 text-white px-4 py-5 flex justify-between items-center shadow-lg sticky top-0 z-50">
+        <h1 className="text-xl md:text-3*1 font-bold">
           Smile Dental Clinic
         </h1>
 
-        <div className="flex gap-6 text-lg font-medium">
-          <a href="#about">About</a>
-          <a href="#treatments">Treatments</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#doctor">Doctor</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <div className="hidden md:flex gap-6 text-lg font-medium">
+  <a href="#about">About</a>
+  <a href="#treatments">Treatments</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#doctor">Doctor</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<button
+  onClick={() => setOpen(!open)}
+  className="md:hidden text-4xl"
+>
+  ☰
+</button>
       </nav>
+      {open && (
+  <div className="bg-blue-900 text-white flex flex-col px-8 py-4 gap-4 md:hidden text-lg">
+    <a href="#about">About</a>
+    <a href="#treatments">Treatments</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#doctor">Doctor</a>
+    <a href="#contact">Contact</a>
+  </div>
+)}
 
       {/* HERO SECTION */}
       <section className="bg-gradient-to-r from-blue-100 to-white py-20 px-10">
