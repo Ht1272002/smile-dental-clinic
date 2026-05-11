@@ -42,7 +42,7 @@ export default function Home() {
       <section className="relative h-screen">
 
   <img
-    src="/image/hero.jpg"
+    src="/image/hero-clean.jpg"
     alt="Dental Clinic"
     className="absolute inset-0 w-full h-full object-cover"
   />
